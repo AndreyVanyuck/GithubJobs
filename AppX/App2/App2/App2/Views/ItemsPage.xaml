@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App2.Views.ItemsPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="ItemsListView"
+                      HasUnevenRows="True" 
+                      ItemsSource="{Binding Jobs}"
+                      ItemSelected="OnItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout Spacing="0">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="{Binding Title}" FontSize="Medium" TextColor="Blue" LineBreakMode="WordWrap" FontAttributes="Bold" HorizontalOptions="Start"/>
+                                        <Image x:Name="IconSave12"
+                                               Source="save.png"
+                                               WidthRequest="30"   
+                                               HeightRequest="30"
+                                               HorizontalOptions="EndAndExpand">
+                                            <Image.GestureRecognizers>
+                                                <TapGestureRecognizer x:Name="Image1" Tapped="TapGestureRecognizer_Tapped"/>
+                                            </Image.GestureRecognizers>
+                                        </Image>
+
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Vertical">
+                                        <Label Text="{Binding Location}" LineHeight="1.8"  FontFamily="Arial" FontSize="Default"></Label>
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Text="{Binding Company}" LineHeight="1.8" FontSize="Small" ></Label>
+                                            <Label Text="-" LineHeight="1.8"></Label>
+                                            <Label Text="{Binding Type}" FontSize="Small" TextColor="Green" HorizontalOptions="FillAndExpand"></Label>
+                                        </StackLayout>
+                                        <Label Text="{Binding Description}" FontSize="10" MaxLines="5" LineBreakMode="WordWrap"></Label>
+                                        <Label Text="{Binding Created_at}" HorizontalOptions="EndAndExpand" FontSize="14"></Label>
+                                        
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+    
+    

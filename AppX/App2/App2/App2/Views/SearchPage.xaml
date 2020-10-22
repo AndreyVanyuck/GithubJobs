@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:local="clr-namespace:App2"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App2.Views.SearchPage"
+             Title="Search">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="GitHub Jobs"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Spacing="2">
+            <Label Text="{local:Translate LabelJobDescription}"
+                FontSize="Large" 
+                FontAttributes="Bold"   />
+            <Entry x:Name="EntryJobDescription"
+                Placeholder="{local:Translate PlaceholderLabelJobDescription}"
+                PlaceholderColor="Gray"
+                TextColor="Orange"
+                HorizontalTextAlignment="Center"
+                FontAttributes="Italic"/>
+            <Label Text="{local:Translate LabelLocation}"
+                FontSize="Large" 
+                FontAttributes="Bold"   />
+            <Entry x:Name="EntryLocation"
+                Placeholder="{local:Translate PlaceholderLabelLocation}"
+                PlaceholderColor="Gray"
+                TextColor="Orange"
+                HorizontalTextAlignment="Center"
+                FontAttributes="Italic"/>
+            <StackLayout Orientation="Horizontal">
+                <CheckBox x:Name="CheckBox" Color="Blue"></CheckBox>
+                <Label Text="{local:Translate CheckBoxFullTimeOnly}" TextColor="Black" FontAttributes="Bold" FontSize="Large"/>
+            </StackLayout>
+            <StackLayout Padding="150,20,150,20">
+                <Button Text="{local:Translate ButtonSearch}" TextColor="Black" BackgroundColor="LightGray" BorderColor="Blue" Clicked="Button_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

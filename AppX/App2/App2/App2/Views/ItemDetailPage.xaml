@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App2.Views.ItemDetailPage"
+             Title="{Binding Item.Title}">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid BackgroundColor="White">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="150"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid BackgroundColor="Green">
+                    <StackLayout Spacing="0" HorizontalOptions="StartAndExpand">
+                        <Label Text="{Binding Item.Location}" FontSize="15"/>
+                        <Label Text="{Binding Item.Title}" FontAttributes="Bold" FontSize="22" LineHeight="2"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding Item.Company}" FontSize="15"/>
+                            <Label Text="-" FontSize="15"/>
+                            <Label Text="{Binding Item.Type}" TextColor="Green" FontSize="15"/>
+                        </StackLayout>
+                    </StackLayout>
+                 
+                </Grid>
+                <StackLayout Grid.Row="1" Spacing="15" BackgroundColor="White">
+                    <StackLayout>
+                        <Label Text="{Binding Item.Description}"/>
+                        <Label Text="{Binding Item.How_to_apply}"/>
+                    </StackLayout>
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
+    
