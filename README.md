@@ -1,4 +1,6 @@
 # GithubJobs
+Simple mobile application. Used by Xamarin.Forms.
+
 ![alt text](https://sun9-72.userapi.com/H8hQo-OA6m6lqe9wz8S4-GM06KKX63hsY66XJw/J-qPC18TQZE.jpg)
 ![alt text](https://sun9-21.userapi.com/tE0HR1wjsaPy_GQSQLT2f6Le6nx-m3hcv-1vmw/OfxYMCC7XU8.jpg)
 ![alt text](https://sun9-26.userapi.com/DVwFclHzYwdohN1qnIdd0pD_9nIhEqk2MAQnyA/Cr70QWgSDaA.jpg)
